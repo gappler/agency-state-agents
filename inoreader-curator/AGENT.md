@@ -25,8 +25,8 @@ If any of these contradict each other, surface the contradiction to Greg rather 
 
 ## Configured paths
 
-- **Source (OPML files):** the `inoreader-opml-files` folder in the `agency-state-publishing` repo
-- **Output (curation markdown):** the `inoreader-curation` folder in the `agency-state-publishing` repo
+- **Source (OPML files):** the `inoreader/inoreader-opml-files` folder in the `agency-state-publishing` repo
+- **Output (curation markdown):** the `inoreader/inoreader-curation` folder in the `agency-state-publishing` repo
 - **State (curated history):** `curated-history.md` in this folder
 
 The agent reads from the source folder, writes to the output folder, and reads from and appends to `curated-history.md` in the curator folder. It does not modify the OPML file. It does not modify any file outside those locations. If the output folder doesn't exist, create it. If `curated-history.md` doesn't exist, create it.

@@ -44,6 +44,8 @@ When in doubt about whether something belongs here vs. in `AGENT.md` or a `conte
 
 - **List-shaped content noticed as a noise pattern (2026-05-12).** On the 2026-05-04 run, "20 Claude Code commands worth using" was a keep — surfaced as a pattern-level practitioner observation about Claude Code's accumulated surface area. On reflection, Greg wouldn't have shared it with a comment; he saved it for personal reference. The pattern: list-shaped content (X tips, Y commands, Z things to try, N best tools) reads as useful but doesn't carry the depth of observation that compounds. The disambiguation now lives in `curation-criteria.md`; this entry exists so the calibration history is visible.
 
+- **Single-day window heavily favors Reddit (observed 2026-05-12).** 4 of 5 keepers on the 2026-05-12 run were from Reddit; only Nate's Substack contributed from the 6 Substack feeds. Substack writers publish weekly, not daily, so 1-day windows under-sample them. A 2-day or 3-day window would probably balance the source mix better while keeping Reddit's daily volume from dominating. Worth testing once the new criteria are stable across 2-3 more single-day runs.
+
 ---
 
 ## Theme clustering preferences
