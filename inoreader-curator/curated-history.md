@@ -64,3 +64,10 @@ Append-only. Each date section lists the URLs included in that day's curation fi
 - https://natesnewsletter.substack.com/p/enterprise-ai-buying-build-room
 - https://natesnewsletter.substack.com/p/agent-judge-layer-production-control
 - https://www.thealgorithmicbridge.com/p/how-to-stop-ai-agents-from-frying
+
+## 2026-05-12
+- https://www.reddit.com/r/ClaudeCode/comments/1tag1kv/new_in_claude_code_agent_view/
+- https://www.reddit.com/r/ClaudeCode/comments/1tb3y6k/prempti_new_oss_policy_and_visibility_layer_for/
+- https://www.reddit.com/r/ClaudeCode/comments/1tb7edc/inherited_a_3month_old_repo_from_a_vibe_engineer/
+- https://www.reddit.com/r/claude/comments/1ta39ri/i_dug_through_10k_posts_to_explore_what_people/
+- https://natesnewsletter.substack.com/p/agentic-commerce-protocol-war
