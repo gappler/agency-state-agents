@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Environment files
+.env
+.env.*
+
+# Node
+node_modules/
+
+# Common secrets
+*.pem
+*.key
+credentials.json
+secrets.json
+secrets.yaml
+secrets.yml
