@@ -42,6 +42,8 @@ When in doubt about whether something belongs here vs. in `AGENT.md` or a `conte
 
 - **Substack runs high-signal in the current feed mix (observed across 2026-05-04, 2026-05-05, 2026-05-09).** Every Nate's Substack item across the three runs was a keep, and the Algorithmic Bridge piece on tool sprawl was a keep. Observation, not instruction: no source quota, no source prior, no balancing. The expectation is that tighter Reddit filtering will let Substack surface naturally on relevance alone. Flag it if the pattern reverses.
 
+- **List-shaped content noticed as a noise pattern (2026-05-12).** On the 2026-05-04 run, "20 Claude Code commands worth using" was a keep — surfaced as a pattern-level practitioner observation about Claude Code's accumulated surface area. On reflection, Greg wouldn't have shared it with a comment; he saved it for personal reference. The pattern: list-shaped content (X tips, Y commands, Z things to try, N best tools) reads as useful but doesn't carry the depth of observation that compounds. The disambiguation now lives in `curation-criteria.md`; this entry exists so the calibration history is visible.
+
 ---
 
 ## Theme clustering preferences

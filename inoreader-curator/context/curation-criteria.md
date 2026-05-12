@@ -40,6 +40,7 @@ Articles that:
 - Are marketing-as-creative-discipline content (Agency State isn't about creative)
 - Cover enterprise AI consulting case studies that don't translate down-tier
 - **Fail the pattern-recognition test on practitioner content.** The test: does this post name a pattern the reader would recognize in their own work? Pattern-level posts — about method, frameworks, named patterns, threshold observations — land across the engagement lifecycle, with pre-engagement prospects, current clients, and former clients all seeing their own work in them. Implementation-help posts (bug reports, version regressions, billing surprises, "how do I do X" troubleshooting, vendor complaints) don't carry that recognition; they're only useful to someone sitting with the same specific bug. Same operational credibility on the author side — only one kind generalizes.
+- Are **list-shaped content** — X tips, Y commands, Z things to try, N best tools. Even when curated by a credible practitioner. The list format fragments attention rather than building it, competes with depth-of-pattern content, and tends to lose its value within a day. Exception: a list that organizes a real pattern (e.g., "the 5 phases of an AI workflow audit") may pass — the test is whether the structure carries the insight or merely catalogues items.
 
 ## Edge cases
 
