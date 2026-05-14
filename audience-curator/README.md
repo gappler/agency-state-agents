@@ -37,7 +37,3 @@ Two caveats before you wire this up:
 
 - **Headless stalls on tool-approval prompts.** A real unattended run needs `--dangerously-skip-permissions` or a pre-approved tool allowlist configured in settings. Don't add the flag casually.
 - **`context/operational-rules.md` still scopes out scheduled/autonomous runs.** Lift that before adding launchd.
-
-## v0.1 caps still in effect
-
-Per `context/operational-rules.md`: first 10 feeds, 1-day window, 100 candidate cap. The OPML now has 8 feeds total, so the feed cap is moot; the time and candidate caps still apply.

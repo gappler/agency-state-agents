@@ -1,15 +1,15 @@
 # Output Format
 
-Exact markdown structure for the curation file. The file lands in the `inoreader-curation` folder in the `agency-state-publishing` repo, named:
+Exact markdown structure for the curation file. The file lands in the `curation/` folder in the `agency-state-publishing` repo, named:
 
-`[YYYY-MM-DD]-curation.md`
+`[YYYY-MM-DD]-audience.md`
 
-Create the folder if it doesn't exist. Use today's date in YYYY-MM-DD format.
+Create the folder if it doesn't exist. Use today's date in YYYY-MM-DD format. The `-audience` suffix carries the agent identifier so a future sibling curator (e.g., `[YYYY-MM-DD]-listening.md`) can land in the same flat folder without collision.
 
 ## Structure
 
 ```markdown
-# Inoreader Curation — [YYYY-MM-DD]
+# Audience Curation — [YYYY-MM-DD]
 
 Reviewed [N] articles from [M] feeds across the last [W] day(s).
 

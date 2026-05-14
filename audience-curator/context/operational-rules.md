@@ -1,16 +1,6 @@
 # Operational Rules
 
-Guardrails, scope boundaries, and the v0.1 first-run caps. These rules are stable — they don't change run-to-run. If they need to change, update this file rather than overriding it in conversation.
-
-## v0.1 first-run caps
-
-For the first run, scope down to confirm cost and runtime shape:
-
-- Process the **first 10 feeds** from the OPML, not all of them
-- Use a **1-day window** instead of 3
-- Cap **candidate articles at 100** before applying the top-15 selection
-
-Once the first run completes successfully, these caps can be lifted. Greg will tell you when. Until he does, keep the caps in place.
+Guardrails and scope boundaries. These rules are stable — they don't change run-to-run. If they need to change, update this file rather than overriding it in conversation.
 
 ## Guardrails
 
