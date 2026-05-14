@@ -1,6 +1,12 @@
 # Operational Rules
 
-Guardrails and scope boundaries. These rules are stable — they don't change run-to-run. If they need to change, update this file rather than overriding it in conversation.
+Guardrails, scope boundaries, and run configuration. These rules are stable — they don't change run-to-run. If they need to change, update this file rather than overriding it in conversation.
+
+## Run configuration
+
+- **Window: 7 days.** Filter candidate items to the trailing 7 days from the run date. Matches the source rhythm — Substack-class publications publish on a weekly cadence, so 7d is the right granularity to catch each source's most recent piece without re-sampling old content.
+- **Cadence: weekly.** Audience curator is intended to be run once per week. If a run is invoked off-cadence, that's fine — the curated-history dedupe handles overlap.
+- **Selection target: top 15.** Output the top 15 after relevance scoring and theme clustering. If fewer than 15 relevant items exist in the candidate pool, output what you have; don't pad with weak items.
 
 ## Guardrails
 
