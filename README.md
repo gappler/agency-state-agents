@@ -27,7 +27,7 @@ agency-state-agents/
 
 ## Current agents
 
-- **inoreader-curator** — Daily/on-demand RSS curation from Inoreader OPML exports. Outputs themed markdown files with draft react/share copy in Greg's voice.
+- **audience-curator** — Daily/on-demand RSS curation from Inoreader OPML exports. Outputs themed markdown files with draft react/share copy in Greg's voice.
 
 ## Adding a new agent
 

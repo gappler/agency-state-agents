@@ -11,7 +11,7 @@ The agent's behavior lives in `AGENT.md`. This file is just the launch instructi
 ## Normal run (interactive)
 
 ```
-cd inoreader-curator
+cd audience-curator
 claude
 ```
 
@@ -19,7 +19,7 @@ claude
 
 Then in the session:
 
-> Read AGENT.md and run as the inoreader-curator agent.
+> Read AGENT.md and run as the audience-curator agent.
 
 The first directive in `AGENT.md` points the session at `memory.md`, then the run flow in `AGENT.md` takes over. You can stop after each step or let it run end to end.
 
@@ -28,7 +28,7 @@ The first directive in `AGENT.md` points the session at `memory.md`, then the ru
 For unattended runs — e.g., the eventual launchd path:
 
 ```
-claude -p 'Read AGENT.md in the current working directory and run the inoreader-curator end to end.'
+claude -p 'Read AGENT.md in the current working directory and run the audience-curator end to end.'
 ```
 
 — invoked from this folder.
