@@ -14,7 +14,7 @@ Once the first run completes successfully, these caps can be lifted. Greg will t
 
 ## Guardrails
 
-- Do not modify the OPML file at any point.
+- Do not modify the source list file at any point.
 - Do not modify any file outside the curation output folder, with one exception: `curated-history.md` in the curator folder, which the agent appends to after each successful run.
 - Do not access external services requiring authentication. No Inoreader API. No email. No posting anywhere.
 - Only read from the public web via standard HTTP requests for RSS feed URLs and article URLs found in those feeds.
@@ -45,14 +45,14 @@ The agent maintains one persistent state file: `curated-history.md` in the curat
 
 These are how the agent should approach the work, not strict rules:
 
-- **Parse the OPML/XML file** by extracting `xmlUrl` attributes for feed URLs.
+- **Parse the markdown source list** by reading lines that start with `- url:` under each `## ` header. The URL is the value after `url:`. Other fields (`author:`, `added:`, `why:`) are audit trail for Greg — ignore them.
 - **Fetch each RSS feed** via standard HTTP. Handle failures gracefully — log them to the Notes section, skip the feed, don't halt the run.
 - **Filter items** to the configured time window before scoring relevance, to avoid wasting reasoning on stale items.
 - **Fetch article URLs** when feeds don't include full article text and the title + summary aren't enough to score relevance confidently. Don't fetch every URL by default — fetch when needed.
 - **Apply relevance criteria via reasoning**, not keyword matching. The criteria live in `curation-criteria.md`.
 - **Cluster the top 15 by theme** *after* selection. Themes derive from the actual content of the selected batch, not from a pre-defined list.
 - **Draft react/share text last**, after final selection and grouping. Drafting before selection wastes effort on items that won't make the cut.
-- **Read `curated-history.md` early in the run**, after parsing the OPML but before fetching feeds. Note any explicit re-surface URLs Greg named in the run instruction.
+- **Read `curated-history.md` early in the run**, after parsing the source list but before fetching feeds. Note any explicit re-surface URLs Greg named in the run instruction.
 - **Filter out already-curated URLs** from the candidate pool right after the time-window filter, before scoring. Re-surface overrides bypass this filter.
 - **Append today's URLs to `curated-history.md`** as the last write of the run, after the curation markdown is successfully written. Use a `## YYYY-MM-DD` heading.
 - **Be respectful of feed servers.** Reasonable delay between requests. Standard User-Agent. If a feed rate-limits, back off and skip rather than retrying aggressively.
@@ -62,7 +62,7 @@ These are how the agent should approach the work, not strict rules:
 
 When you run, tell Greg:
 
-1. The OPML path you read and the count of feeds in it
+1. The source list path you read and the count of feeds in it
 2. Progress as you fetch (every few feeds, e.g., "processing feed 5 of 10")
 3. The final count of articles reviewed and the count selected for the top 15
 4. The output file path so Greg can open it directly
@@ -71,7 +71,7 @@ Errors and skipped feeds get logged to the Notes section at the bottom of the ma
 
 ## When something goes wrong
 
-- **OPML file missing or unreadable:** Stop the run. Tell Greg the path and the error. Don't guess at a fallback.
+- **Source list file missing or unreadable:** Stop the run. Tell Greg the path and the error. Don't guess at a fallback.
 - **All feeds fail:** Stop the run. Tell Greg. There's no useful output from a run with zero successful feed fetches.
 - **Some feeds fail:** Continue. Log to Notes. Run on the feeds that succeeded.
 - **Fewer than 15 relevant articles in the candidate pool:** Output what you have. Don't pad with weak items to hit fifteen. The brand voice rule is "ammunition, not filler."

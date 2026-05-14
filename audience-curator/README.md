@@ -1,10 +1,10 @@
 ---
-title: Inoreader Curator — How to Run
+title: Audience Curator — How to Run
 version: 0.1.0
-last_updated: 2026-05-09
+last_updated: 2026-05-14
 ---
 
-# Inoreader Curator — How to Run
+# Audience Curator — How to Run
 
 The agent's behavior lives in `AGENT.md`. This file is just the launch instructions.
 
