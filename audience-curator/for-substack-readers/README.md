@@ -1,0 +1,1 @@
+The files in this directory are for substack readers - their weight bearing duplicates live in other folders for various reasons. 
