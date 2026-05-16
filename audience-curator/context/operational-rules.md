@@ -4,7 +4,7 @@ Guardrails, scope boundaries, and run configuration. These rules are stable — 
 
 ## Run configuration
 
-- **Window: 7 days.** Filter candidate items to the trailing 7 days from the run date. Matches the source rhythm — Substack-class publications publish on a weekly cadence, so 7d is the right granularity to catch each source's most recent piece without re-sampling old content.
+- **Window: 10 days.** Filter candidate items to the trailing 10 days from the run date. Targets a weekly Friday run rhythm; the 3-day buffer catches articles in the gap if a run gets missed. The `curated-history.md` dedupe prevents re-sampling content from prior runs, so the wider window doesn't risk duplicates — it only widens the catch on missed-run weeks.
 - **Cadence: weekly.** Audience curator is intended to be run once per week. If a run is invoked off-cadence, that's fine — the curated-history dedupe handles overlap.
 - **Selection target: top 15.** Output the top 15 after relevance scoring and theme clustering. If fewer than 15 relevant items exist in the candidate pool, output what you have; don't pad with weak items.
 
@@ -29,13 +29,36 @@ When Greg asks for something out of scope, say so explicitly. Describe what woul
 
 ## State tracking
 
-The agent maintains one persistent state file: `curated-history.md` in the curator folder. It records URLs included in each day's curation, structured by date.
+The agent maintains two persistent state files in the curator folder:
+
+### `curated-history.md` — URL de-duplication
+
+Records URLs included in each day's curation, structured by date.
 
 **Read:** before scoring candidates. URLs in `curated-history.md` are filtered out of the candidate pool. Re-curation is now actively prevented by this file, not passively prevented by the time window. The window still matters for relevance freshness; the history matters for de-duplication.
 
 **Append:** after a successful run, the agent appends today's curated URLs under a new `## YYYY-MM-DD` heading. If the file doesn't exist, create it.
 
 **Override pattern:** when Greg explicitly names a URL to re-surface in a run (e.g., "re-surface the judge layer piece" or "include the Codex bottleneck article again"), include it. Mark the item in the output with `Re-surfaced from [original curation date]:` so the re-surface is visible to anyone reading the file. The override applies only to URLs Greg names explicitly — the default is to skip.
+
+### `feed-stats.md` — per-feed productivity
+
+Records per-feed counts (items in window, items selected) per run. Used to compute a rolling 4 / 8 / 12-run + all-time productivity table included in each curation file. Informs source pruning decisions over time.
+
+**Format:** date-stamped sections, one line per feed:
+
+```
+## YYYY-MM-DD
+- feed_url | feed_name | in_window | selected
+```
+
+Keyed on feed URL (stable across `## ` header renames in `sources/audience.md`). Display name is read from the current source list at run time, not from this file — so renaming a feed in the source list updates its display in future runs without breaking historical data.
+
+**Read:** before writing the curation file, to compute the rolling stats table.
+
+**Append:** as the final write of the run, after the curation file and after `curated-history.md`. If the file doesn't exist, create it (YAML header + title + format note, then the first date section).
+
+**Pruning heuristic:** roughly 12 consecutive runs (3 months at weekly cadence) of zero contribution to keepers = candidate for cull. Discretion overrides the heuristic — a sporadic publisher who lands a high-signal piece once a quarter still earns the slot. Don't auto-prune.
 
 ## Implementation expectations
 
@@ -49,8 +72,10 @@ These are how the agent should approach the work, not strict rules:
 - **Cluster the top 15 by theme** *after* selection. Themes derive from the actual content of the selected batch, not from a pre-defined list.
 - **Draft react/share text last**, after final selection and grouping. Drafting before selection wastes effort on items that won't make the cut.
 - **Read `curated-history.md` early in the run**, after parsing the source list but before fetching feeds. Note any explicit re-surface URLs Greg named in the run instruction.
+- **Read `feed-stats.md` early in the run**, alongside `curated-history.md`. Used to compute the rolling productivity table that gets included in the curation file output.
 - **Filter out already-curated URLs** from the candidate pool right after the time-window filter, before scoring. Re-surface overrides bypass this filter.
-- **Append today's URLs to `curated-history.md`** as the last write of the run, after the curation markdown is successfully written. Use a `## YYYY-MM-DD` heading.
+- **Track per-feed counts during the run.** Record in-window count after the time-window filter; record selected count after final selection. These get appended to `feed-stats.md` at the end of the run and surfaced in the curation file's productivity table.
+- **Append today's URLs to `curated-history.md` and today's per-feed counts to `feed-stats.md`** as the last writes of the run, after the curation markdown is successfully written. Use `## YYYY-MM-DD` headings in both.
 - **Be respectful of feed servers.** Reasonable delay between requests. Standard User-Agent. If a feed rate-limits, back off and skip rather than retrying aggressively.
 - **For Reddit feeds, start with a browser User-Agent (Safari) rather than the default curator UA.** Reddit's anti-scraping increasingly blocks bot-identifying UAs — runs hitting `r/Claude`, `r/Anthropic`, and `r/ClaudeCode` 403'd on the curator UA on 2026-05-12 but returned 200 with a Safari UA. Logged in `memory.md` under feed reliability as a 2026-05-12 observation.
 
@@ -75,3 +100,5 @@ Errors and skipped feeds get logged to the Notes section at the bottom of the ma
 - **Output file already exists for today's date:** Ask Greg before overwriting. He may want to keep the prior run.
 - **`curated-history.md` missing:** Create it (YAML header + title only). Continue the run.
 - **`curated-history.md` malformed:** Stop the run. Tell Greg. Don't overwrite a malformed file — it's the record of what's been curated and corruption shouldn't propagate.
+- **`feed-stats.md` missing:** Create it (YAML header + title + format note). Continue the run. The productivity table in the output will reflect "this is the first tracked run."
+- **`feed-stats.md` malformed:** Stop the run. Tell Greg. Same principle as `curated-history.md` — corruption shouldn't propagate.

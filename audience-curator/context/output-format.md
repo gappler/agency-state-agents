@@ -39,6 +39,10 @@ Reviewed [N] articles from [M] feeds across the last [W] day(s).
 
 [Optional: 2–3 sentences on patterns in the discarded items — vendor announcement clusters, emerging trends, anything worth noticing.]
 
+## Feed productivity
+
+[Rolling per-feed table. See "Feed productivity table" section below for format.]
+
 ## Notes
 
 [Logged failures, skipped feeds, anything worth knowing for the next run.]
@@ -86,3 +90,28 @@ The Notes section is for what didn't work — failed feeds, skipped articles, ed
 ```
 
 If the run was clean, the Notes section can be a single line: *Run completed without errors.*
+
+## Feed productivity table
+
+Surfaced near the end of the file (between "What's not in the top 15" and "Notes") so Greg can see source-mix health at a glance and inform pruning decisions over time.
+
+Format: one row per feed in the current `sources/audience.md`. Columns show `selected / in_window` for rolling 4-run, 8-run, 12-run, and all-time spans. Data comes from `audience-curator/feed-stats.md`; the agent appends today's row to that file as the last write of the run.
+
+```markdown
+## Feed productivity
+
+| Feed | Last 4 (sel/in) | Last 8 (sel/in) | Last 12 (sel/in) | All-time (sel/in) |
+|---|---|---|---|---|
+| [Feed name from current source list] | N/N | N/N | N/N | N/N |
+| ... |
+```
+
+Notes on the table:
+
+- Feed names come from the current `## ` headers in `sources/audience.md` (not from historical data in `feed-stats.md`), so renaming a feed updates its display without breaking history.
+- Feeds appear in the table in the order they appear in `sources/audience.md`.
+- If a feed was added partway through the tracked history, columns covering pre-add runs show what the system has — the math doesn't pretend the feed was there longer than it was.
+- If a feed has been removed from the current `sources/audience.md`, it does *not* appear in the table. The full history remains in `feed-stats.md`.
+- When fewer than 4 / 8 / 12 runs of history exist, columns equal what's available. A single-run history shows the same numbers in all four columns. That's honest, not a bug.
+
+Below the table, optional one-line flags for any feed that looks like it's heading toward the 12-run cull threshold (~3 months of zero contribution). Don't auto-prune — just surface the signal.

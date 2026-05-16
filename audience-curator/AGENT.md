@@ -28,23 +28,26 @@ If any of these contradict each other, surface the contradiction to Greg rather 
 - **Source (markdown source list):** `sources/audience.md` in the `agency-state-publishing` repo
 - **Output (curation markdown):** the `curation/` folder in the `agency-state-publishing` repo
 - **State (curated history):** `curated-history.md` in this folder
+- **State (feed stats):** `feed-stats.md` in this folder
 
-The agent reads the source list, writes to the output folder, and reads from and appends to `curated-history.md` in the curator folder. It does not modify the source list. It does not modify any file outside those locations. If the output folder doesn't exist, create it. If `curated-history.md` doesn't exist, create it.
+The agent reads the source list, writes to the output folder, and reads from and appends to `curated-history.md` and `feed-stats.md` in the curator folder. It does not modify the source list. It does not modify any file outside those locations. If the output folder doesn't exist, create it. If `curated-history.md` or `feed-stats.md` doesn't exist, create it.
 
 ## Run flow (high-level)
 
 1. Confirm the source list path exists. Read it, extract feed URLs from `- url:` lines under each `## ` header, count them. Report the count to Greg.
 2. Read `curated-history.md` (create it if missing — empty file with the YAML header and title). Note any URLs Greg explicitly named for re-surfacing this run.
-3. Fetch each feed via standard HTTP. Report progress (e.g., "processing feed 3 of 7"). Skip failures gracefully and log them for the Notes section.
-4. Filter items to the configured time window.
-5. Remove URLs already in `curated-history.md` from the candidate pool. Re-surface overrides bypass this filter.
-6. For feeds without full article text, fetch the article URL when needed for relevance scoring.
-7. Score relevance via reasoning over titles + summaries (and full article text where available). Not keyword matching. Use `context/curation-criteria.md`.
-8. Select the top 15. Cluster them by theme — themes derived from actual content of the batch, not pre-defined.
-9. Draft react/share copy for each item *last*, after final selection and grouping. Run the draft through the brand voice self-check before writing. Re-surfaced items get a `Re-surfaced from [YYYY-MM-DD]` note in the output.
-10. Write the markdown file to the output folder using the format in `context/output-format.md`.
-11. Append today's curated URLs to `curated-history.md` under a new `## YYYY-MM-DD` heading.
-12. Report the output file path so Greg can open it directly.
+3. Read `feed-stats.md` (create it if missing — see `context/operational-rules.md` for format). The agent uses this to compute the rolling 4 / 8 / 12-run + all-time per-feed productivity table in the output.
+4. Fetch each feed via standard HTTP. Report progress (e.g., "processing feed 3 of 7"). Skip failures gracefully and log them for the Notes section.
+5. Filter items to the configured time window. Track per-feed in-window counts for the productivity table.
+6. Remove URLs already in `curated-history.md` from the candidate pool. Re-surface overrides bypass this filter.
+7. For feeds without full article text, fetch the article URL when needed for relevance scoring.
+8. Score relevance via reasoning over titles + summaries (and full article text where available). Not keyword matching. Use `context/curation-criteria.md`.
+9. Select the top 15. Track per-feed selected counts for the productivity table. Cluster them by theme — themes derived from actual content of the batch, not pre-defined.
+10. Draft react/share copy for each item *last*, after final selection and grouping. Run the draft through the brand voice self-check before writing. Re-surfaced items get a `Re-surfaced from [YYYY-MM-DD]` note in the output.
+11. Write the markdown file to the output folder using the format in `context/output-format.md`. Include the per-feed productivity table (read from `feed-stats.md` plus today's counts).
+12. Append today's curated URLs to `curated-history.md` under a new `## YYYY-MM-DD` heading.
+13. Append today's per-feed counts to `feed-stats.md` under a new `## YYYY-MM-DD` heading.
+14. Report the output file path so Greg can open it directly.
 
 ## Reporting back
 

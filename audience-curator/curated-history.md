@@ -71,3 +71,13 @@ Append-only. Each date section lists the URLs included in that day's curation fi
 - https://www.reddit.com/r/ClaudeCode/comments/1tb7edc/inherited_a_3month_old_repo_from_a_vibe_engineer/
 - https://www.reddit.com/r/claude/comments/1ta39ri/i_dug_through_10k_posts_to_explore_what_people/
 - https://natesnewsletter.substack.com/p/agentic-commerce-protocol-war
+
+## 2026-05-14
+- https://natesnewsletter.substack.com/p/rag-agents-knowledge-layer-architecture
+- https://simonw.substack.com/p/vibe-coding-and-agentic-engineering
+- https://natesnewsletter.substack.com/p/openclaw-agent-runtime-model-swapping
+- https://www.thealgorithmicbridge.com/p/how-this-small-startup-achieved-a
+- https://garymarcus.substack.com/p/agents-and-roi
+- https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress
+- https://natesnewsletter.substack.com/p/enterprise-ai-deployment-layer
+- https://www.productcompass.pm/p/claude-code-beginners-guide
