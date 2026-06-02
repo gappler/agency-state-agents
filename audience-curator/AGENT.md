@@ -25,7 +25,7 @@ If any of these contradict each other, surface the contradiction to Greg rather 
 
 ## Configured paths
 
-- **Source (markdown source list):** `sources/audience.md` in the `agency-state-publishing` repo
+- **Source (markdown source list):** `sources/audience.md` in this curator's own folder (`agency-state-agents/audience-curator/sources/`)
 - **Output (curation markdown):** the `curation/` folder in the `agency-state-publishing` repo
 - **State (curated history):** `curated-history.md` in this folder
 - **State (feed stats):** `feed-stats.md` in this folder

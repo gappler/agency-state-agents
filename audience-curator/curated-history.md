@@ -81,3 +81,37 @@ Append-only. Each date section lists the URLs included in that day's curation fi
 - https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress
 - https://natesnewsletter.substack.com/p/enterprise-ai-deployment-layer
 - https://www.productcompass.pm/p/claude-code-beginners-guide
+
+## 2026-05-22
+- https://natesnewsletter.substack.com/p/ai-organize-files-before-writing
+- https://www.productcompass.pm/p/pm-brain-os
+- https://natesnewsletter.substack.com/p/build-buy-hire-wait-ai-matrix
+- https://natesnewsletter.substack.com/p/agent-infrastructure-control-layer
+- https://natesnewsletter.substack.com/p/agent-protocol-stack-mcp-a2a
+- https://natesnewsletter.substack.com/p/marketing-humans-and-agents-2026
+- https://natesnewsletter.substack.com/p/saas-agent-license-renewal
+- https://newsletter.mkt1.co/p/ads
+- https://newsletter.mkt1.co/p/buildathon-mkt1-mcp-in-claude
+- https://garymarcus.substack.com/p/checking-the-math-behind-openai-and
+- https://www.thealgorithmicbridge.com/p/how-to-think-of-ai-as-a-normal-technology
+- https://www.wsj.com/tech/ai/vibe-coding-slop-ai-tools-e6a99394
+- https://simonw.substack.com/p/the-last-six-months-in-llms-in-five
+- https://www.platformer.news/google-agents-daily-brief-newsletters-ask-youtube
+- https://www.wsj.com/opinion/how-i-choose-which-cloudflare-employees-to-replace-with-ai-40a197e5
+
+## 2026-06-01
+- https://natesnewsletter.substack.com/p/ai-office-files-verify-workflow
+- https://natesnewsletter.substack.com/p/agent-product-analytics
+- https://www.productcompass.pm/p/agentic-engineering-for-pms
+- https://natesnewsletter.substack.com/p/product-management-cheap-software-governance
+- https://natesnewsletter.substack.com/p/ai-agents-platform-team-bottleneck
+- https://www.productcompass.pm/p/codex-setup-for-pms
+- https://www.wsj.com/opinion/ai-made-my-expertise-more-effective-c341ec81
+- https://www.platformer.news/boris-cherny-interview-ai-jobs/
+- https://www.thealgorithmicbridge.com/p/how-ai-is-taking-away-your-ability
+- https://www.oneusefulthing.org/p/choosing-to-stay-human
+- https://natesnewsletter.substack.com/p/public-ai-work-team-learning
+- https://newsletter.mkt1.co/p/buildathon-recap-mkt1-mcp-server-claude
+- https://simonw.substack.com/p/i-think-anthropic-and-openai-have
+- https://www.wsj.com/tech/ai/corporate-america-is-starting-to-ration-ai-as-cost-skyrockets-1eb99d7a
+- https://www.thealgorithmicbridge.com/p/what-apple-knows-about-ai-that-silicon

@@ -85,9 +85,12 @@ The Notes section is for what didn't work — failed feeds, skipped articles, ed
 ```
 - Feed [name] returned 404. Skipped.
 - Feed [name] returned malformed XML. Skipped.
+- Access [preview|blocked]: [Feed name] — [title] ([URL]) — [what was missing, e.g., "teaser only, paywall splash for full text" or "401 on article fetch"].
 - [N] articles in the candidate pool but not in top 15 — see "What's not in the top 15" above for patterns.
 - [Anything else worth knowing]
 ```
+
+List access issues item-by-item, one line each. Greg can't see the agent's unauthenticated view from his own subscriber session — this is the signal he uses to spot-check whether the curator missed something good, and to decide over time whether a feed still earns its slot. See `operational-rules.md` for how access gets classified during the run.
 
 If the run was clean, the Notes section can be a single line: *Run completed without errors.*
 
