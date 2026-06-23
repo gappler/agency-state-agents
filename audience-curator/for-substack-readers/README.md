@@ -1,24 +1,30 @@
 ---
-title: For Substack Readers — Public Edition
-purpose: reader-facing copies of audience-curator files, shared via Substack
-version: 1
+title: For Substack Readers — Sample Output
+purpose: a reader-facing sample of the audience-curator's weekly output, linked from the Substack post "Drowning in Substack"
+version: 2
+last_updated: 2026-06-23
 ---
 
 # For Substack Readers
 
-This folder is the **public edition** of the audience-curator — the versions safe to
-show Substack readers. The working files the agent actually reads and writes live in the
-parent `audience-curator/` folder; these are derived copies, kept here on purpose.
+This folder is for readers who came from [Drowning in Substack](https://agencystate.substack.com/p/drowning-in-substack)
+and want to see what the audience-curator actually produces.
 
-They are **not** auto-synced. When a canonical file changes, the copy here has to be
-re-derived by hand, so treat the parent folder as the source of truth and this folder as
-a published snapshot.
+Since that post was written, this repo went public — so the agent's real working files are
+now visible directly, no sanitized copies needed:
 
-| File | Relationship to canonical |
-|------|---------------------------|
-| `audience.md` | Verbatim copy of `../sources/audience.md` (the source list is already public-safe). |
-| `memory.md` | **Sanitized** copy of `../memory.md` — internal name, operational workarounds, and dated calibration history removed. Shows the *shape* of the agent's memory without the internal guts. |
-| `2026-05-14-audience.md` | A representative sample of curated output. |
+- **Source list** — [`../sources/audience.md`](../sources/audience.md)
+- **The agent's role definition** — [`../AGENT.md`](../AGENT.md)
+- **Scoring criteria, rules, output format** — [`../context/`](../context/)
+- **Calibration memory** — [`../memory.md`](../memory.md)
+- **Per-feed productivity log** — [`../feed-stats.md`](../feed-stats.md)
 
-If a canonical file gains anything reader-unsafe, update the sanitized copy here before
-re-sharing — don't point readers at the parent files directly.
+What's kept here is the one thing that *isn't* otherwise public: a full sample of the weekly
+output, since the actual run files live in a private publishing repo.
+
+| File | What it is |
+|------|------------|
+| `2026-06-23-audience.md` | A complete weekly run — themed clusters, per-item REACT/SHARE drafts, the productivity table, and run notes. Representative of what the agent produces each week. |
+
+The sample is a point-in-time snapshot, refreshed by hand now and then — not auto-synced. For the
+current state of the system, read the working files linked above.
