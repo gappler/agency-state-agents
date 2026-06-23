@@ -115,3 +115,26 @@ Append-only. Each date section lists the URLs included in that day's curation fi
 - https://simonw.substack.com/p/i-think-anthropic-and-openai-have
 - https://www.wsj.com/tech/ai/corporate-america-is-starting-to-ration-ai-as-cost-skyrockets-1eb99d7a
 - https://www.thealgorithmicbridge.com/p/what-apple-knows-about-ai-that-silicon
+
+## 2026-06-14
+- https://www.thealgorithmicbridge.com/p/nine-things-about-claude-mythos-5
+- https://simonw.substack.com/p/claude-fable-is-relentlessly-proactive
+- https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos
+- https://www.productcompass.pm/p/claude-fable-5-guide
+- https://natesnewsletter.substack.com/p/ai-token-cost-management
+- https://natesnewsletter.substack.com/p/token-burn-dashboard
+- https://natesnewsletter.substack.com/p/claude-code-vs-codex-agents
+- https://www.productcompass.pm/p/claude-code-dynamic-workflows
+- https://garymarcus.substack.com/p/slop-productivity-and-why-the-ai
+- https://www.wsj.com/tech/ai/the-job-that-ai-was-supposed-to-kill-needs-more-humans-than-ever-0771e4cf
+- https://www.nytimes.com/2026/06/04/magazine/ai-agents-openclaw-small-business.html
+- https://www.wired.com/story/a-court-has-ruled-that-google-is-liable-for-false-statements-generated-by-ai-overviews/
+
+## 2026-06-23
+- https://natesnewsletter.substack.com/p/openai-ipo-own-the-harness
+- https://natesnewsletter.substack.com/p/ai-agent-ownership
+- https://natesnewsletter.substack.com/p/ai-agent-maintenance
+- https://natesnewsletter.substack.com/p/claude-codex-agent-skills
+- https://www.productcompass.pm/p/loop-engineering-for-pms
+- https://www.thealgorithmicbridge.com/p/how-to-be-irreplaceable
+- https://www.thealgorithmicbridge.com/p/how-to-use-ai-to-make-you-better

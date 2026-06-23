@@ -56,3 +56,37 @@ Pruning heuristic: roughly 12 consecutive runs (3 months at weekly cadence) of z
 - https://feeds.content.dowjones.io/public/rss/RSSWSJD | WSJ Tech | 28 | 2
 - https://www.wired.com/feed/tag/ai/latest/rss | Wired AI | 10 | 0
 - https://www.theatlantic.com/feed/category/ai-watchdog/ | The Atlantic — AI Watchdog | 0 | 0
+
+## 2026-06-14
+- https://simonw.substack.com/feed | Simon Willison's Newsletter | 2 | 1
+- https://www.oneusefulthing.org/feed | One Useful Thing | 2 | 1
+- https://garymarcus.substack.com/feed | The Road to AI We Can Trust | 14 | 1
+- https://www.thealgorithmicbridge.com/feed | The Algorithmic Bridge | 4 | 1
+- https://natesnewsletter.substack.com/feed | Nate's Substack | 5 | 3
+- https://newsletter.mkt1.co/feed | MKT1 Newsletter | 1 | 0
+- https://www.productcompass.pm/feed | The Product Compass with Paweł | 3 | 2
+- https://stratechery.com/feed/ | Stratechery | 7 | 0
+- https://www.ben-evans.com/benedictevans?format=rss | Benedict Evans | 0 | 0
+- https://www.platformer.news/feed | Platformer | 3 | 0
+- https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/spotlight/artificial-intelligence/rss.xml | NYT Artificial Intelligence | 14 | 1
+- https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml | NYT Technology | 36 | 0
+- https://feeds.content.dowjones.io/public/rss/RSSWSJD | WSJ Tech | 29 | 1
+- https://www.wired.com/feed/tag/ai/latest/rss | Wired AI | 10 | 1
+- https://www.theatlantic.com/feed/category/ai-watchdog/ | The Atlantic — AI Watchdog | 0 | 0
+
+## 2026-06-23
+- https://simonw.substack.com/feed | Simon Willison's Newsletter | 2 | 0
+- https://www.oneusefulthing.org/feed | One Useful Thing | 0 | 0
+- https://garymarcus.substack.com/feed | The Road to AI We Can Trust | 6 | 0
+- https://www.thealgorithmicbridge.com/feed | The Algorithmic Bridge | 3 | 2
+- https://natesnewsletter.substack.com/feed | Nate's Substack | 4 | 4
+- https://newsletter.mkt1.co/feed | MKT1 Newsletter | 0 | 0
+- https://www.productcompass.pm/feed | The Product Compass with Paweł | 1 | 1
+- https://stratechery.com/feed/ | Stratechery | 6 | 0
+- https://www.ben-evans.com/benedictevans?format=rss | Benedict Evans | 0 | 0
+- https://www.platformer.news/feed | Platformer | 1 | 0
+- https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/spotlight/artificial-intelligence/rss.xml | NYT Artificial Intelligence | 10 | 0
+- https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml | NYT Technology | 20 | 0
+- https://feeds.content.dowjones.io/public/rss/RSSWSJD | WSJ Tech | 28 | 0
+- https://www.wired.com/feed/tag/ai/latest/rss | Wired AI | 10 | 0
+- https://www.theatlantic.com/feed/category/ai-watchdog/ | The Atlantic — AI Watchdog | 0 | 0
