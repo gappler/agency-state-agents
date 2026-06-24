@@ -59,14 +59,14 @@ If you find yourself writing the same content in both fields, the REACT is proba
 
 ## Voice rules for the drafts
 
-Run every REACT and SHARE through the brand voice self-check before writing. The check lives in `../../_shared/brand-voice.md`. Quick reminders:
+Run every REACT and SHARE through the owner's voice self-check before writing. The check lives in `../../_shared/owners-voice.md`. Quick reminders:
 
-- First-person founder voice. *I think*, *I've found*, not *we believe*.
-- Direct, observational, slightly tired, slightly amused.
-- On-brand: *beleaguered*, *operational sludge*, *method*, *leverage* (as noun), *pipelines*, *workflow*, *outputs*.
-- Forbidden: *empower*, *transform*, *unlock*, *amplify*, *scale yourself*, *synergy*, *desktop partner*, *leverage* (as verb), *working systems* (as noun for what gets delivered).
-- No fear framing, no overclaim, no fake proof.
-- Confident without overclaiming. Warm without being soft.
+- First person, relaxed and explanatory — connected sentences that explain patiently, the way a practitioner writes to peers. Not staccato fragments, not marketing copy.
+- Show the thinking; name concrete specifics and real numbers, not vague quantities.
+- Name the honest limit plainly; don't announce that you're being honest.
+- A sharp line earns its place only when there's a real fact or idea under it (substance rule).
+- Forbidden: hype and SaaS clichés — *transform*, *unlock*, *leverage*, *amplify*, *empower*, *game-changer*, *seamless*, *10x*. No pitch; if it sounds like selling, cut it.
+- Peer to peer, not performing. End plainly and forward — no mic-drop, no "what about you?"
 
 ## Theme naming
 

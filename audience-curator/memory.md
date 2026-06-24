@@ -27,7 +27,7 @@ When in doubt about whether something belongs here vs. in `AGENT.md` or a `conte
 
 *Compact phrasings the agent has generated that proved tighter or more useful than the source-file equivalents. Keep so they don't get reinvented or lost.*
 
-- **"Would this make them roll their eyes?"** — the inverse phrasing of the ammunition test. Useful as a negative-case gut-check on voice drafts: if the answer is yes, the line is off-brand even if no forbidden words appear.
+- **"Would this make them roll their eyes?"** — a negative-case gut-check on voice drafts: if the answer is yes, the line is off-voice (performative, salesy, or off-register) even if no forbidden words appear.
 - **"Monday morning test"** — for relevance scoring. Would a working strategist be able to do something with this when they sit down at their desk on Monday? If no, score lower. Sharper than the abstract "operationally honest" criterion when cutting borderline items.
 
 ---

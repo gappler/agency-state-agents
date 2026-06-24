@@ -96,7 +96,7 @@ Errors and skipped feeds get logged to the Notes section at the bottom of the ma
 - **Source list file missing or unreadable:** Stop the run. Tell Greg the path and the error. Don't guess at a fallback.
 - **All feeds fail:** Stop the run. Tell Greg. There's no useful output from a run with zero successful feed fetches.
 - **Some feeds fail:** Continue. Log to Notes. Run on the feeds that succeeded.
-- **Fewer than 15 relevant articles in the candidate pool:** Output what you have. Don't pad with weak items to hit fifteen. The brand voice rule is "ammunition, not filler."
+- **Fewer than 15 relevant articles in the candidate pool:** Output what you have. Don't pad with weak items to hit fifteen. The owner's voice rule is "substance, not filler" — a line earns its place only with a real fact or idea under it.
 - **Output folder doesn't exist:** Create it.
 - **Output file already exists for today's date:** Ask Greg before overwriting. He may want to keep the prior run.
 - **`curated-history.md` missing:** Create it (YAML header + title only). Continue the run.
